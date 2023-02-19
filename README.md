@@ -16,3 +16,11 @@ Rerun `./gradlew assembleRelease`
 `KeyError:''`
 Check this page: https://github.com/huggingface/transformers/issues/4061
 Could be either of the fixes mentioned there
+
+## jupyter + setuptools
+While importing a previously installed module in Jupyter
+```ZipImportError: bad local file header```
+This is likely to happen because 
+1. Setuptools version is outdated / incompatible with python version
+2. Module was reinstalled with `python setup.py install` while jupyter notebooks was already running
+
